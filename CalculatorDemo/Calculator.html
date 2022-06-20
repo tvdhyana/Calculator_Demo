@@ -2,54 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="CalculatorStyle.css" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="CalculatorStyle.css" />
+    <h1 style="text-align: center ;"> Calculator </h1>
   </head>
-
   <body>
-    <div class="container">
-      <h1>Calculator</h1>
-
-      <div class="calculator">
-        <input type="text" name="screen" id="screen" />
+    <div class="app-wrapper" style="text-align:center ;">
+      <div class="calc-wrapper">
+        <div class="calculator">
+            <div class="calc-display">
+                <input type="text" id="result" />
+              </div>
         <table>
-          <tr>
-            <td><button>(</button></td>
-            <td><button>)</button></td>
-            <td>
-              <button style="background-color: rgb(16, 192, 16)">C</button>
-            </td>
-            <td><button>%</button></td>
-          </tr>
-          <tr>
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>X</button></td>
-          </tr>
-          <tr>
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>-</button></td>
-          </tr>
-          <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
-          </tr>
-          <tr>
-            <td><button>0</button></td>
-            <td><button>.</button></td>
-            <td><button>/</button></td>
-            <td><button>=</button></td>
-          </tr>
-        </table>
+            <tr>
+              <td><button onclick="display('(')"  class="button operator">(</button></td>
+              <td><button onclick="display(')')"  class="button operator">)</button></td>
+              <td><button style="background-color: rgb(16, 192, 16)" onclick="clr()">C</button></td>
+            <td><button onclick="display('%')"  class="button operator">%</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="display('7')"  class="button digit">7</button></td>
+              <td><button onclick="display('8')" class="button digit">8</button></td>
+              <td><button onclick="display('9')" class="button digit">9</button></td>
+              <td><button onclick="display('*')" class="button operator">*</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="display('4')"  class="button digit">4</button></td>
+              <td><button onclick="display('5')" class="button digit">5</button></td>
+              <td><button onclick="display('6')"  class="button digit">6</button></td>
+              <td><button onclick="display('-')" class="button operator">-</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="display('1')" class="button digit">1</button></td>
+              <td><button onclick="display('2')" class="button digit">2</button></td>
+              <td><button onclick="display('3')" class="button digit">3</button></td>
+              <td><button onclick="display('+')" class="button operator">+</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="display('0')" class="button digit zero">0</button></td>
+              <td><button onclick="display('.')" class="button digit">.</button></td>
+              <td><button onclick="display('/')" class="button operator">/</button></td>
+              <td><button onclick="solve()" class="button operator">=</button></td>
+            </tr>
+          </table>
+        </div>
+        </div>
       </div>
     </div>
   </body>
   <script src="CalculatorLogic.js"></script>
 </html>
+
+
+

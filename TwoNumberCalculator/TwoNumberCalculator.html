@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body style="background-color: rgb(168, 211, 170) ;">
+    <h1 style="text-align:center ;"> Two number calculator </h1>
+    <form style="text-align: center;">
+      Enter 1st Number : <input type="text" id="firstNumber" /><br/> <br/>
+      Enter 2nd Number: <input type="text" id="secondNumber" /><br/> </br>
+        <input
+        type="button"
+        style="background-color: rgb(189, 61, 82); color: white"
+        onClick="addBy()"
+        value="Addition"
+        />
+
+        <input
+        type="button"
+        style="background-color: rgb(189, 61, 82); color: white"
+        onClick="subBy()"
+        value="Subtraction"
+        />
+
+        <input
+        type="button"
+        style="background-color: rgb(189, 61, 82); color: white"
+        onClick="multiplyBy()"
+        value="Multiplication"
+        />
+
+        <input
+        type="button"
+        style="background-color: rgb(189, 61, 82); color: white"
+        onClick="divideBy()"
+        value="Division"
+        />
+    </form>
+
+    <p style="text-align: center;">
+      The Result is : <br />
+      <span id="result"> </span>
+    </p>
+
+  </body>
+  <script src="TwoNumberCalculator.js"></script>
+</html>
